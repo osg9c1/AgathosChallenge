@@ -57,6 +57,7 @@
                     </div>
                     {%else%}
                     <h3>Upload Seed File</h3>
+                    <p> Upload a csv file and view the average length of service and ratio to national average in a tabular format</p>
                     <p>
                         <form enctype="multipart/form-data" method="post" action=""> {% csrf_token %}
                             <p>{{ form.non_field_errors }}</p>
