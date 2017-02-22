@@ -8,6 +8,6 @@ class UploadSeedFileForm(forms.Form):
 
 
 class GenerateSeedFileForm(forms.Form):
-    start_date = forms.DateField()
-    end_date = forms.DateField()
+    start_date = forms.DateField(widget=forms.TextInput(attrs={'placeholder': 'YYYY-MM-DD'}))
+    end_date = forms.DateField(widget=forms.TextInput(attrs={'placeholder': 'YYYY-MM-DD'}))
     no_of_records = forms.IntegerField()
