@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'/>
+    <link href='http://fonts.googleapis.com/css?family=Abel|Satisfy' rel='stylesheet' type='text/css'/>
+    <link href="{{STATIC_URL}}css/table.css" rel="stylesheet" type="text/css" media="all"/>
+
+</head>
+<body>
+    <header id="header"><p></p></header>
+    <div id="container">
+        <main id="center" class="column">
+            <article>
+                <center>
+                    {%if output_list%}
+                    <div class="datagrid">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Average Time</th>
+                                <th>Ratio of Average</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {%for i in output_list %}
+                            <tr>
+                                <td>
+                                    {{i.mechanic}}
+                                </td>
+                                <td>
+                                    {{i.repair_type}}
+                                </td>
+                                <td>
+                                    {{i.average_los}}
+                                </td>
+                                <td>
+                                    {{i.ratio_of_average}}
+                                </td>
+                            </tr>
+
+                            {%endfor%}
+                            </tbody>
+                        </table>
+                    </div>
+                    {%else%}
+                    <h3>Upload Seed File</h3>
+                    <p>
+                        <form enctype="multipart/form-data" method="post" action=""> {% csrf_token %}
+                            <p>{{ form.non_field_errors }}</p>
+                            <p>{{ form.file.label_tag }} {{ form.file.help_text }}</p>
+                            <p>
+                                {{ form.file.errors }}
+                                {{ form.file }}
+                            </p>
+                            <input class="button-style" type="submit" value="Submit">
+                        </form>
+                    </p>
+                    {%endif%}
+                </center>
+            </article>
+        </main>
+        <nav id="left" class="column">
+            <ul>
+                <li><a href="/admin/upload_seed/">Upload Seed File</a></li>
+                <li><a href="/admin/download_seed">Create Seed File</a></li>
+                <li><a href="/admin/lengthOfService/shopworkflowfact/">View Model Data</a></li>
+            </ul>
+        </nav>
+        <div id="right" class="column">
+        </div>
+    </div>
+</body>
+</html>

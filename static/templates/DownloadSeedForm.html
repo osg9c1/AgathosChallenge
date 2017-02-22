@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Abel|Satisfy' rel='stylesheet' type='text/css' />
+<link href="{{STATIC_URL}}css/table.css" rel="stylesheet" type="text/css" media="all" />
+
+</head>
+<body>
+
+	<header id="header"><p></p></header>
+
+	<div id="container">
+
+		<main id="center" class="column">
+			<article>
+
+				<center>
+                    <h3>Create Seed File</h3>
+				<p> <form method="POST" action=''> {% csrf_token %}
+                 <table>
+                {{form.as_table}}
+                       </table>
+               <input class="button-style" type="submit" value="Submit">
+
+            </form></p>
+                    </center>
+
+			</article>
+		</main>
+
+		<nav id="left" class="column">
+
+			<ul>
+				<li><a href="/admin/upload_seed/">Upload Seed File</a></li>
+				<li><a href="/admin/download_seed">Create Seed File</a></li>
+                <li><a href="/admin/lengthOfService/shopworkflowfact/">View Shop Work Flow Fact Table</a></li>
+
+			</ul>
+
+
+		</nav>
+
+		<div id="right" class="column">
+
+		</div>
+
+	</div>
+
+
+</body>
+
+</html>
