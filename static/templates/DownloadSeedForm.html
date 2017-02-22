@@ -12,7 +12,16 @@
 </head>
 <body>
 
-	<header id="header"><p></p></header>
+	<header id="header">
+        <p>
+                {% for message in messages %}
+        <li style="color: #ee7600;" {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+            {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+            {{ message }}
+        </li>
+                {% endfor %}
+    </p>
+    </header>
 
 	<div id="container">
 
@@ -38,7 +47,7 @@
 			<ul>
 				<li><a href="/admin/upload_seed/">Upload Seed File</a></li>
 				<li><a href="/admin/download_seed">Create Seed File</a></li>
-                <li><a href="/admin/lengthOfService/shopworkflowfact/">View Shop Work Flow Fact Table</a></li>
+                <li><a href="/admin/lengthOfService/shopworkflowfact/">View Model Data</a></li>
 
 			</ul>
 
