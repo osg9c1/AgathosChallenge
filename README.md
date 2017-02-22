@@ -34,6 +34,9 @@
  ## Ranking Metrics:
  * Repair type : Ranking each repair type separately 
  * Ratio of Average: Ranking by ratio of average in descending order.
+ 
+ ## Seed File
+ * The seed file being used for every transaction is stored in lengthOfService/seed.csv. 
 
  
 
