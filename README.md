@@ -35,8 +35,20 @@
  * Repair type : Ranking each repair type separately 
  * Ratio of Average: Ranking by ratio of average in descending order.
  
- ## Seed File
+## Seed File
  * The seed file being used for every transaction is stored in lengthOfService/seed.csv. 
+
+## Run the Calculations from UI:
+ * Upload the Seed File http://localhost:8000/admin/upload_seed and submit, you can see the output in a tabular format.
+
+## Run the Calculations from Shell:
+*  python manage.py shell
+*  from print_to_screen import *
+*  write_to_shell()
+ 
+ 
+## Run the Tests
+* python manage.py test lengthOfService.LosComputationTest.compute_los_test
 
  
 
