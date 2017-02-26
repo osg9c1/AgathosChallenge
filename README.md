@@ -42,6 +42,7 @@
  * Upload the Seed File http://localhost:8000/admin/upload_seed and submit, you can see the output in a tabular format.
 
 ## Run the Calculations from Shell:
+*  place/replace the seed file as seed.csv in the lengthOfService folder
 *  python manage.py shell
 *  from print_to_screen import *
 *  write_to_shell()
