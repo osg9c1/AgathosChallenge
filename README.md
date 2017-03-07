@@ -1,4 +1,4 @@
-# AgathosChallenge
+# CarRepairCodingChallenge
 ## Pre-requites
 * python 2.7
 * Django 1.4
@@ -14,7 +14,7 @@
     * pip install numpy
 
 * Checkout AgathosChallenge from github
-    * git clone https://github.com/osg9c1/AgathosChallenge.git
+    * git clone https://github.com/osg9c1/CarRepairCodingChallenge.git
     * cd AgathosChallenge/lengthOfService
 * python manage.py syncdb
 * python manage.py runserver    
